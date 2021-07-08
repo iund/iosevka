@@ -1,0 +1,42 @@
+name: ci
+
+on: [push, pull-request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      plan_name: iosevka
+
+    steps:
+    - name: Check out
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+
+    - name: Install dependencies
+      run: sudo apt install ttfautohint
+
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: 'npm'
+
+    - run: npm install
+
+    - name: Cache build output
+      uses: actions/cache@v2
+      id: dist-cache
+      with:
+        path: ${{github.workspace}}/dist
+        key: ${{runner.os}}-${{env.plan_name}}-${{hashFiles('dist/**/*.ttf')}}
+
+    - name: Build
+      run: npm run build -- contents::${{env.plan_name}}
+      if: steps.dist-cache.outputs.cache-hit != 'true'
+
+    - name: Save build output
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-output
+        path: ${{github.workspace}}/dist
