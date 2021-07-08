@@ -17,9 +17,17 @@ jobs:
     - name: Install dependencies
       run: sudo apt install ttfautohint
 
-    - uses: c-hive/gha-npm-cache@v1
+    - name: Cache node modules
+      uses: actions/cache@v2
+      id: npm-cache
+      with:
+        path: |
+          ${{github.workspace}}/package*.json
+          ${{github.workspace}}/node_modules
+        key: ${{runner.os}}-${{hashFiles('package*.json', 'node_modules/**')}}
 
     - run: npm install
+      if: steps.npm-cache.outputs.cache-hit != 'true'
 
     - name: Cache build output
       uses: actions/cache@v2
