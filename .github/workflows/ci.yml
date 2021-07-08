@@ -17,10 +17,7 @@ jobs:
     - name: Install dependencies
       run: sudo apt install ttfautohint
 
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        cache: 'npm'
+    - uses: c-hive/gha-npm-cache@v1
 
     - run: npm install
 
