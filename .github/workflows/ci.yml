@@ -34,7 +34,7 @@ jobs:
       id: dist-cache
       with:
         path: ${{github.workspace}}/dist
-        key: ${{runner.os}}-${{env.plan_name}}-${{hashFiles('dist/**/*.ttf')}}
+        key: ${{runner.os}}-${{env.plan_name}}-${{hashFiles('build-plans.toml')}}
 
     - name: Build
       run: npm run build -- contents::${{env.plan_name}}
