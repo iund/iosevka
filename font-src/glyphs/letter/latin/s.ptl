@@ -1,7 +1,6 @@
 $$include '../../../meta/macros.ptl'
 
 import [mix linreg clamp fallback] from '../../../support/utils'
-import [DesignParameters] from '../../../meta/aesthetics'
 import [DollarShrinkKernel DollarShorterBar CvDecompose MathSansSerif] from "../../../support/gr"
 
 glyph-module
@@ -123,7 +122,6 @@ glyph-block Letter-Latin-S : begin
 					hookend O (sw -- stroke) (swItalicAdj -- Stroke)
 					g4   (SB - OX + SOBot) SHook
 
-	glyph-block-export SStrokeAlt
 	define [SStrokeAlt] : params [top hook swStart swEnd oXLeftTop offsetLT offsetRB offsetC] : begin
 		define stroke : Math.max swStart swEnd
 		define fine   : Math.min swStart swEnd
@@ -211,6 +209,9 @@ glyph-block Letter-Latin-S : begin
 		[Just SLAB-INWARD] : ArcEndInwardSerifR RightSB bot  sw hook
 		__ : glyph-proc
 
+	define CyrlGeMarks : object
+		e       : MarkSet.OfZone { .top (XH + Accent / 2) .bot 0 }
+
 	define SConfig : object
 		serifless               { SLAB-NONE      SLAB-NONE      }
 		unilateralSerifed       { SLAB-CLASSICAL SLAB-NONE      }
@@ -274,7 +275,7 @@ glyph-block Letter-Latin-S : begin
 			include : RevSAutoSlabEnd   doBS 0  [AdviceStroke2 2 3 XH] Hook
 
 		create-glyph "cyrl/ge.italic.\(suffix)" : glyph-proc
-			include : MarkSet.e
+			include : CyrlGeMarks.e
 			include : RevSmallSStroke SLAB-CLASSICAL doBS [AdviceStroke2 2 3 XH] Ess
 			include : ArcStartSerifL SB XH [AdviceStroke2 2 3 XH] Hook Accent
 			include : RevSAutoSlabEnd doBS 0  [AdviceStroke2 2 3 XH] Hook

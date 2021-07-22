@@ -1,5 +1,60 @@
 ## Modifications since version 2.x
 
+### 7.3.3
+
+ * Fix serif placement of Latin Small Letter Reversed R with Fishhook (`U+027F`) (#1163).
+
+
+### 7.3.2
+
+ * Fix anchor placement of:
+   - Latin Letter Small Capital R (`U+0280`) (#1159)
+   - Latin Letter Small Capital L (`U+029F`) (#1159)
+   - Cyrillic Small Letter Psi (`U+0471`) (#1159)
+   - Latin Letter Small Capital E (`U+1D07`) (#1159)
+   - Latin Letter Small Capital L with Stroke (`U+1D0C`) (#1159)
+   - Latin Letter Small Capital U (`U+1D1C`) (#1159)
+   - Modifier Letter Small Capital U (`U+1DB8`) (#1159)
+   - Turned Small F (`U+214E`) (#1159)
+   - Latin Letter Small Capital Turned E (`U+2C7B`) (#1159)
+   - Latin Small Letter Egyptological Alef (`U+A723`) (#1159)
+   - Latin Small Letter Egyptological Ain (`U+A725`) (#1159)
+   - Latin Letter Small Capital F (`U+A730`) (#1159)
+   - Latin Small Letter R Rotunda (`U+A75B`) (#1159)
+   - Combining Homothetic Above (`U+034B`) (#1162)
+   - Combining Almost Equal To Above (`U+034C`) (#1162)
+   - Combining Latin Small Letter Long S (`U+1DE5`) (with `cv51 = 5`) (#1162)
+   - Combining Cyrillic Letter De (`U+2DE3`) (#1162)
+
+
+### 7.3.1
+
+ * Fix placement of above marks over Cyrillic Small Ge, Te, and Ya (#1157).
+
+
+### 7.3.0
+
+ * Add Greek Upsilon with Hook Symbol (`U+03D2`).
+ * Add flat-topped lowercase Delta (#856).
+ * Add rounded lowercase Xi (#856).
+ * Fix Bulgarian Small Ka's variant assignment (#1147).
+ * Fix shape of Ruble Sign (#1155).
+
+
+### 7.2.8
+
+ * Fix broken shape of Cyrillic Small Letter Sha when `cv45 = 9` (#1154).
+
+
+### 7.2.7
+
+ * Fix incorrect shape of Proportional To (`U+221D`), Infinity (`U+221E`) and Inverted Lazy S (`U+223E`) under Italic/Oblique.
+ * Fix shape of `d` `serifed-tailed` (#1150).
+ * Make Latin Small Letter Dotless J with Stroke and Hook (`U+0284`) follow shape of `f` (#1151).
+ * Fix `cv44` application on phonetic letters (#1152).
+ * Fix shape of Combining Low Line (#1153).
+
+
 ### 7.2.6
 
  * Fixed shape of Bulgarian I with Breve, Yer, Yeri, De, Che and En (#1147).

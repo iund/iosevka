@@ -1,8 +1,6 @@
 $$include '../../../meta/macros.ptl'
 
 import [mix barmixL linreg clamp fallback] from '../../../support/utils'
-import [DesignParameters] from '../../../meta/aesthetics'
-import '../../../support/point' as Point
 
 glyph-module
 
@@ -41,7 +39,7 @@ glyph-block Letter-Cyrillic-De : begin
 		include : CyrDeShape CAP
 
 	create-glyph 'cyrl/de.upright' : glyph-proc
-		include : MarkSet.e
+		include : MarkSet.p
 		include : CyrDeShape XH
 
 	create-glyph 'cyrl/de.italic' : glyph-proc
@@ -60,5 +58,5 @@ glyph-block Letter-Cyrillic-De : begin
 			archv
 			flat (RightSB - OX) SmallSmoothA
 			curl (RightSB - OX) (XH - SmallSmoothB)
-			quadcontrols 0 0.8
+			quadControls 0 0.8
 			g4 (SB + Stroke * 1.1) CAP

@@ -1,8 +1,6 @@
 $$include '../../../meta/macros.ptl'
 
 import [mix linreg clamp fallback] from '../../../support/utils'
-import [DesignParameters] from '../../../meta/aesthetics'
-import '../../../support/point' as Point
 
 glyph-module
 
@@ -109,7 +107,7 @@ glyph-block Symbol-Math-Arith : begin
 
 	do "dotted"
 		foreach { suffix { DrawAt kDotRadius overshoot } } [Object.entries DotVariants] : do
-			local dr : DotRadius * kDotRadius
+			local dr : DotRadius * kDotRadius * OperatorStroke / Stroke
 			create-glyph "dotplus.\(suffix)" : glyph-proc
 				local gap : AdviceStroke 12
 				include : union

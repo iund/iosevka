@@ -1,7 +1,6 @@
 $$include '../../../meta/macros.ptl'
 
 import [mix linreg clamp fallback] from '../../../support/utils'
-import [DesignParameters] from '../../../meta/aesthetics'
 import [Dotless CvDecompose MathSansSerif] from "../../../support/gr"
 
 glyph-module
@@ -154,7 +153,7 @@ glyph-block Letter-Latin-U : begin
 			include : SetGrekUpperTonos [if fLTSlab (-SideJut) 0]
 
 		create-glyph "smcpU.\(suffix)" : glyph-proc
-			include : MarkSet.capital
+			include : MarkSet.e
 			include : Base XH
 			include : Slabs XH
 

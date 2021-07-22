@@ -1360,48 +1360,56 @@ tag = "cv24"
 rank = 1
 description = "Straight `Y` without serifs"
 selector.Y = "straightSerifless"
+selector.'grek/upsilonHookedSymbolShape' = "straightSerifless"
 selector."Y/sansSerif" = "straightSerifless"
 
 [prime.capital-y.variants.curly-serifless]
 rank = 2
 description = "Slightly curly `Y`, like Iosevka 2.x, without serifs"
 selector.Y = "curlySerifless"
+selector.'grek/upsilonHookedSymbolShape' = "straightSerifless"
 selector."Y/sansSerif" = "curlySerifless"
 
 [prime.capital-y.variants.straight-base-serifed]
 rank = 3
 description = "Standard, straight `Y`, with serif at bottom"
 selector.Y = "straightBaseSerifed"
+selector.'grek/upsilonHookedSymbolShape' = "straightBaseSerifed"
 selector."Y/sansSerif" = "straightSerifless"
 
 [prime.capital-y.variants.curly-base-serifed]
 rank = 4
 description = "Slightly curly `Y`, like Iosevka 2.x, with serif at bottom"
 selector.Y = "curlyBaseSerifed"
+selector.'grek/upsilonHookedSymbolShape' = "straightBaseSerifed"
 selector."Y/sansSerif" = "curlySerifless"
 
 [prime.capital-y.variants.straight-motion-serifed]
 rank = 5
 description = "Standard, straight `Y`, with motion serifs"
 selector.Y = "straightMotionSerifed"
+selector.'grek/upsilonHookedSymbolShape' = "straightSerifless"
 selector."Y/sansSerif" = "straightSerifless"
 
 [prime.capital-y.variants.curly-motion-serifed]
 rank = 6
 description = "Slightly curly `Y`, like Iosevka 2.x, with motion serifs"
 selector.Y = "curlyMotionSerifed"
+selector.'grek/upsilonHookedSymbolShape' = "straightSerifless"
 selector."Y/sansSerif" = "curlySerifless"
 
 [prime.capital-y.variants.straight-serifed]
 rank = 7
 description = "Standard, straight `Y`, with serifs"
 selector.Y = "straightSerifed"
+selector.'grek/upsilonHookedSymbolShape' = "straightBaseSerifed"
 selector."Y/sansSerif" = "straightSerifless"
 
 [prime.capital-y.variants.curly-serifed]
 rank = 8
 description = "Slightly curly `Y`, like Iosevka 2.x, with serifs"
 selector.Y = "curlySerifed"
+selector.'grek/upsilonHookedSymbolShape' = "straightBaseSerifed"
 selector."Y/sansSerif" = "curlySerifless"
 
 
@@ -2023,6 +2031,7 @@ selector."f/compLigLeft2" = "flatHookCLC2"
 selector."f/phoneticLeft" = "seriflessCrossbarAtXHeight"
 selector.lenisf = "serifless"
 selector.fltail = "tailed"
+selector.dotlessjWithStrokeAndHook = "tailed"
 
 [prime.f.variants.serifed]
 rank = 2
@@ -2034,6 +2043,7 @@ selector."f/compLigLeft2" = "flatHookSerifedCLC2"
 selector."f/phoneticLeft" = "serifedCrossbarAtXHeight"
 selector.lenisf = "serifless"
 selector.fltail = "tailed"
+selector.dotlessjWithStrokeAndHook = "tailed"
 
 [prime.f.variants.tailed]
 rank = 3
@@ -2045,6 +2055,7 @@ selector."f/compLigLeft2" = "flatHookTailedCLC2"
 selector."f/phoneticLeft" = "tailedCrossbarAtXHeight"
 selector.lenisf = "serifless"
 selector.fltail = "tailed"
+selector.dotlessjWithStrokeAndHook = "tailed"
 
 [prime.f.variants.extended]
 rank = 4
@@ -2056,6 +2067,7 @@ selector."f/compLigLeft2" = "flatHookExtendedCLC2"
 selector."f/phoneticLeft" = "extendedCrossbarAtXHeight"
 selector.lenisf = "serifless"
 selector.fltail = "tailed"
+selector.dotlessjWithStrokeAndHook = "tailed"
 
 [prime.f.variants.diagonal-tailed]
 rank = 5
@@ -2067,6 +2079,7 @@ selector."f/compLigLeft2" = "flatHookDiagonalTailedCLC2"
 selector."f/phoneticLeft" = "diagonalTailedCrossbarAtXHeight"
 selector.lenisf = "serifless"
 selector.fltail = "tailed"
+selector.dotlessjWithStrokeAndHook = "tailed"
 
 [prime.f.variants.serifless-crossbar-at-x-height]
 rank = 6
@@ -2078,6 +2091,7 @@ selector."f/compLigLeft2" = "flatHookCLC2"
 selector."f/phoneticLeft" = "seriflessCrossbarAtXHeight"
 selector.lenisf = "seriflessCrossbarAtXHeight"
 selector.fltail = "tailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "tailedCrossbarAtXHeight"
 
 [prime.f.variants.serifed-crossbar-at-x-height]
 rank = 7
@@ -2089,6 +2103,7 @@ selector."f/compLigLeft2" = "flatHookSerifedCLC2"
 selector."f/phoneticLeft" = "serifedCrossbarAtXHeight"
 selector.lenisf = "seriflessCrossbarAtXHeight"
 selector.fltail = "tailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "tailedCrossbarAtXHeight"
 
 [prime.f.variants.tailed-crossbar-at-x-height]
 rank = 8
@@ -2100,6 +2115,7 @@ selector."f/compLigLeft2" = "flatHookTailedCLC2"
 selector."f/phoneticLeft" = "tailedCrossbarAtXHeight"
 selector.lenisf = "seriflessCrossbarAtXHeight"
 selector.fltail = "tailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "tailedCrossbarAtXHeight"
 
 [prime.f.variants.extended-crossbar-at-x-height]
 rank = 9
@@ -2111,6 +2127,7 @@ selector."f/compLigLeft2" = "flatHookExtendedCLC2"
 selector."f/phoneticLeft" = "extendedCrossbarAtXHeight"
 selector.lenisf = "seriflessCrossbarAtXHeight"
 selector.fltail = "tailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "tailedCrossbarAtXHeight"
 
 [prime.f.variants.diagonal-tailed-crossbar-at-x-height]
 rank = 10
@@ -2122,6 +2139,7 @@ selector."f/compLigLeft2" = "flatHookDiagonalTailedCLC2"
 selector."f/phoneticLeft" = "diagonalTailedCrossbarAtXHeight"
 selector.lenisf = "seriflessCrossbarAtXHeight"
 selector.fltail = "tailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "tailedCrossbarAtXHeight"
 
 [prime.f.variants.flat-hook]
 rank = 11
@@ -2133,6 +2151,7 @@ selector."f/compLigLeft2" = "flatHookCLC2"
 selector."f/phoneticLeft" = "flatHookCrossbarAtXHeight"
 selector.lenisf = "flatHook"
 selector.fltail = "flatHookTailed"
+selector.dotlessjWithStrokeAndHook = "flatHookTailed"
 
 [prime.f.variants.flat-hook-serifed]
 rank = 12
@@ -2144,6 +2163,7 @@ selector."f/compLigLeft2" = "flatHookSerifedCLC2"
 selector."f/phoneticLeft" = "flatHookSerifedCrossbarAtXHeight"
 selector.lenisf = "flatHook"
 selector.fltail = "flatHookTailed"
+selector.dotlessjWithStrokeAndHook = "flatHookTailed"
 
 [prime.f.variants.flat-hook-tailed]
 rank = 13
@@ -2155,6 +2175,7 @@ selector."f/compLigLeft2" = "flatHookTailedCLC2"
 selector."f/phoneticLeft" = "flatHookTailedCrossbarAtXHeight"
 selector.lenisf = "flatHook"
 selector.fltail = "flatHookTailed"
+selector.dotlessjWithStrokeAndHook = "flatHookTailed"
 
 [prime.f.variants.flat-hook-extended]
 rank = 14
@@ -2166,6 +2187,7 @@ selector."f/compLigLeft2" = "flatHookExtendedCLC2"
 selector."f/phoneticLeft" = "flatHookExtendedCrossbarAtXHeight"
 selector.lenisf = "flatHook"
 selector.fltail = "flatHookTailed"
+selector.dotlessjWithStrokeAndHook = "flatHookTailed"
 
 [prime.f.variants.flat-hook-diagonal-tailed]
 rank = 15
@@ -2177,6 +2199,7 @@ selector."f/compLigLeft2" = "flatHookDiagonalTailedCLC2"
 selector."f/phoneticLeft" = "flatHookDiagonalTailedCrossbarAtXHeight"
 selector.lenisf = "flatHook"
 selector.fltail = "flatHookTailed"
+selector.dotlessjWithStrokeAndHook = "flatHookTailed"
 
 [prime.f.variants.flat-hook-crossbar-at-x-height]
 rank = 16
@@ -2188,6 +2211,7 @@ selector."f/compLigLeft2" = "flatHookCLC2"
 selector."f/phoneticLeft" = "flatHookCrossbarAtXHeight"
 selector.lenisf = "flatHookCrossbarAtXHeight"
 selector.fltail = "flatHookTailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "flatHookTailedCrossbarAtXHeight"
 
 [prime.f.variants.flat-hook-serifed-crossbar-at-x-height]
 rank = 17
@@ -2199,6 +2223,7 @@ selector."f/compLigLeft2" = "flatHookSerifedCLC2"
 selector."f/phoneticLeft" = "flatHookSerifedCrossbarAtXHeight"
 selector.lenisf = "flatHookCrossbarAtXHeight"
 selector.fltail = "flatHookTailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "flatHookTailedCrossbarAtXHeight"
 
 [prime.f.variants.flat-hook-tailed-crossbar-at-x-height]
 rank = 18
@@ -2210,6 +2235,7 @@ selector."f/compLigLeft2" = "flatHookTailedCLC2"
 selector."f/phoneticLeft" = "flatHookTailedCrossbarAtXHeight"
 selector.lenisf = "flatHookCrossbarAtXHeight"
 selector.fltail = "flatHookTailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "flatHookTailedCrossbarAtXHeight"
 
 [prime.f.variants.flat-hook-extended-crossbar-at-x-height]
 rank = 19
@@ -2221,6 +2247,7 @@ selector."f/compLigLeft2" = "flatHookExtendedCLC2"
 selector."f/phoneticLeft" = "flatHookExtendedCrossbarAtXHeight"
 selector.lenisf = "flatHookCrossbarAtXHeight"
 selector.fltail = "flatHookTailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "flatHookTailedCrossbarAtXHeight"
 
 [prime.f.variants.flat-hook-diagonal-tailed-crossbar-at-x-height]
 rank = 20
@@ -2232,6 +2259,7 @@ selector."f/compLigLeft2" = "flatHookDiagonalTailedCLC2"
 selector."f/phoneticLeft" = "flatHookDiagonalTailedCrossbarAtXHeight"
 selector.lenisf = "flatHookCrossbarAtXHeight"
 selector.fltail = "flatHookTailedCrossbarAtXHeight"
+selector.dotlessjWithStrokeAndHook = "flatHookTailedCrossbarAtXHeight"
 
 
 
@@ -3579,6 +3607,8 @@ tag = "cv44"
 rank = 1
 description = "Standard `t` shape"
 selector.t = "standard"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck"
 selector.tHookTop = "standard"
 selector.tRTail = "retroflexHookBase"
 selector.tLTail = "standard"
@@ -3588,6 +3618,8 @@ selector."tsLig/upperHalf" = "standard"
 rank = 2
 description = "`t` with flat hook"
 selector.t = "flatHook"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck"
 selector.tHookTop = "flatHook"
 selector.tRTail = "retroflexHookBase"
 selector.tLTail = "standard"
@@ -3597,6 +3629,8 @@ selector."tsLig/upperHalf" = "standard"
 rank = 3
 description = "`t` with diagonal tail"
 selector.t = "diagonalTailed"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck"
 selector.tHookTop = "diagonalTailed"
 selector.tRTail = "retroflexHookBase"
 selector.tLTail = "standard"
@@ -3606,6 +3640,8 @@ selector."tsLig/upperHalf" = "standard"
 rank = 4
 description = "Futura-like `t` shape"
 selector.t = "cross"
+selector."t/phoneticLeft1" = "cross"
+selector."t/phoneticLeft2" = "crossPL"
 selector.tHookTop = "cross"
 selector.tRTail = "retroflexHookBase"
 selector.tLTail = "standard"
@@ -3615,6 +3651,8 @@ selector."tsLig/upperHalf" = "standard"
 rank = 5
 description = "`t` without hook and with ony half the cross bar"
 selector.t = "hooklessAsymmetric"
+selector."t/phoneticLeft1" = "hooklessAsymmetric"
+selector."t/phoneticLeft2" = "hooklessAsymmetricPL"
 selector.tHookTop = "hooklessAsymmetric"
 selector.tRTail = "retroflexHookBase"
 selector.tLTail = "standard"
@@ -3624,6 +3662,8 @@ selector."tsLig/upperHalf" = "standard"
 rank = 6
 description = "Standard `t` shape with a shorter neck"
 selector.t = "standardShortNeck"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck"
 selector.tHookTop = "standard"
 selector.tRTail = "retroflexHookBaseShortNeck"
 selector.tLTail = "standardShortNeck"
@@ -3633,6 +3673,8 @@ selector."tsLig/upperHalf" = "standardShortNeck"
 rank = 7
 description = "`t` with flat hook and a slightly shorter neck"
 selector.t = "flatHookShortNeck"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck"
 selector.tHookTop = "flatHook"
 selector.tRTail = "retroflexHookBaseShortNeck"
 selector.tLTail = "standardShortNeck"
@@ -3642,6 +3684,8 @@ selector."tsLig/upperHalf" = "standardShortNeck"
 rank = 8
 description = "`t` with diagonal tail and a shorter neck"
 selector.t = "diagonalTailedShortNeck"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck"
 selector.tHookTop = "diagonalTailed"
 selector.tRTail = "retroflexHookBaseShortNeck"
 selector.tLTail = "standardShortNeck"
@@ -3651,6 +3695,8 @@ selector."tsLig/upperHalf" = "standardShortNeck"
 rank = 9
 description = "Futura-like `t` shape with a shorter neck"
 selector.t = "crossShortNeck"
+selector."t/phoneticLeft1" = "crossShortNeck"
+selector."t/phoneticLeft2" = "crossPLShortNeck"
 selector.tHookTop = "cross"
 selector.tRTail = "retroflexHookBaseShortNeck"
 selector.tLTail = "standardShortNeck"
@@ -3660,6 +3706,8 @@ selector."tsLig/upperHalf" = "standardShortNeck"
 rank = 10
 description = "`t` without hook, with ony half the cross bar and a shorter neck"
 selector.t = "hooklessAsymmetricShortNeck"
+selector."t/phoneticLeft1" = "hooklessAsymmetricShortNeck"
+selector."t/phoneticLeft2" = "hooklessAsymmetricPLShortNeck"
 selector.tHookTop = "hooklessAsymmetric"
 selector.tRTail = "retroflexHookBaseShortNeck"
 selector.tLTail = "standardShortNeck"
@@ -3669,6 +3717,8 @@ selector."tsLig/upperHalf" = "standardShortNeck"
 rank = 11
 description = "Standard `t` shape with a more shorter neck"
 selector.t = "standardShortNeck2"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck2"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck2"
 selector.tHookTop = "standard"
 selector.tRTail = "retroflexHookBaseShortNeck2"
 selector.tLTail = "standardShortNeck2"
@@ -3678,6 +3728,8 @@ selector."tsLig/upperHalf" = "standardShortNeck2"
 rank = 12
 description = "`t` with flat hook and a more shorter neck"
 selector.t = "flatHookShortNeck2"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck2"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck2"
 selector.tHookTop = "flatHook"
 selector.tRTail = "retroflexHookBaseShortNeck2"
 selector.tLTail = "standardShortNeck2"
@@ -3687,6 +3739,8 @@ selector."tsLig/upperHalf" = "standardShortNeck2"
 rank = 13
 description = "`t` with diagonal tail and a more shorter neck"
 selector.t = "diagonalTailedShortNeck2"
+selector."t/phoneticLeft1" = "phoneticLeftShortNeck2"
+selector."t/phoneticLeft2" = "phoneticLeftShortNeck2"
 selector.tHookTop = "diagonalTailed"
 selector.tRTail = "retroflexHookBaseShortNeck2"
 selector.tLTail = "standardShortNeck2"
@@ -3696,6 +3750,8 @@ selector."tsLig/upperHalf" = "standardShortNeck2"
 rank = 14
 description = "Futura-like `t` shape with a more shorter neck"
 selector.t = "crossShortNeck2"
+selector."t/phoneticLeft1" = "crossShortNeck2"
+selector."t/phoneticLeft2" = "crossPLShortNeck2"
 selector.tHookTop = "cross"
 selector.tRTail = "retroflexHookBaseShortNeck2"
 selector.tLTail = "standardShortNeck2"
@@ -3705,6 +3761,8 @@ selector."tsLig/upperHalf" = "standardShortNeck2"
 rank = 15
 description = "`t` without hook, with ony half the cross bar and a more shorter neck"
 selector.t = "hooklessAsymmetricShortNeck2"
+selector."t/phoneticLeft1" = "hooklessAsymmetricShortNeck2"
+selector."t/phoneticLeft2" = "hooklessAsymmetricPLShortNeck2"
 selector.tHookTop = "hooklessAsymmetric"
 selector.tRTail = "retroflexHookBaseShortNeck2"
 selector.tLTail = "standardShortNeck2"
@@ -4518,6 +4576,23 @@ selector."grek/alpha" = "tailedBarred"
 
 
 
+[prime.lower-delta]
+sampler = "δ"
+samplerExplain = "Greek lower Delta"
+tag = "VXAA"
+
+[prime.lower-delta.variants.rounded]
+rank = 1
+description = "Greek lower Delta (`δ`) with rounded top"
+selector."grek/delta" = "rounded"
+
+[prime.lower-delta.variants.flat-top]
+rank = 2
+description = "Greek lower Delta (`δ`) with flat top"
+selector."grek/delta" = "flatTop"
+
+
+
 [prime.capital-gamma]
 sampler = "Γ"
 samplerExplain = "Greek capital Gamma"
@@ -4616,6 +4691,23 @@ selector."grek/lambda" = "curly"
 rank = 4
 description = "More curly Greek small Lambda (`λ`), like Iosevka 2.x, with a tail turns leftward"
 selector."grek/lambda" = "curlyTurn"
+
+
+
+[prime.lower-xi]
+sampler = "ξ"
+samplerExplain = "Greek lower Xi"
+tag = "VXAB"
+
+[prime.lower-xi.variants.rounded]
+rank = 1
+description = "Greek lower Xi (`ξ`) with rounded top"
+selector."grek/xi" = "rounded"
+
+[prime.lower-xi.variants.flat-top]
+rank = 2
+description = "Greek lower Xi (`ξ`) with flat top"
+selector."grek/xi" = "flatTop"
 
 
 
@@ -6172,6 +6264,8 @@ long-s = "bent-hook"
 turn-v = "straight"
 latn-phi = "serifless"
 lower-alpha = "crossing"
+lower-delta = "rounded"
+lower-xi = "flat-top"
 capital-gamma = "serifless"
 lower-iota = "serifed-flat-tailed"
 lower-lambda = "straight"
@@ -7033,6 +7127,8 @@ w = "straight-flat-top"
 y = "straight"
 long-s = "flat-hook"
 lower-alpha = "tailed-barred"
+lower-delta = "flat-top"
+lower-xi = "rounded"
 cyrl-capital-ka = "symmetric-connected-serifless"
 cyrl-ka = "symmetric-connected-serifless"
 cyrl-capital-u = "straight"

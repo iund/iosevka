@@ -1,11 +1,11 @@
 $$include '../../meta/macros.ptl'
 
 import [Arcs Quadify ShapeConv] from "typo-geom"
-import [OffsetCurve BezToContoursSink GEOMETRY_PRECISION] from '../../support/curve-util'
+import [OffsetCurve BezToContoursSink GEOMETRY_PRECISION] from '../../support/geometry/curve-util'
 import [mix linreg clamp fallback] from '../../support/utils'
 import [DesignParameters] from '../../meta/aesthetics'
 import [TieMark TieGlyph] from "../../support/gr"
-import [Box] from '../../support/box'
+import [Box] from '../../support/geometry/box'
 
 glyph-module
 
@@ -295,13 +295,14 @@ glyph-block Marks : begin
 				curl (markMiddle - markExtend * 0.2) [mix ttop tbot 1.5]
 
 		create-forked-glyph 'tildedotdotAbove' 0x34B : glyph-proc
+			set-mark-anchor 'above' markMiddle (XH - AccentStackOffset / 4) markMiddle (aboveMarkTop + AccentStackOffset / 4)
 			local r : 0.75 * DotRadius * fine / HalfStroke
 			include : DotAt markMiddle [mix tbot ttop 1.5] r
 			include : DotAt markMiddle [mix ttop tbot 1.5] r
 
 	create-glyph 'dblTildeAbove' 0x34C : glyph-proc
 		set-width 0
-		set-mark-anchor 'above' markMiddle XH markMiddle aboveMarkTop
+		set-mark-anchor 'above' markMiddle (XH - AccentStackOffset / 4) markMiddle (aboveMarkTop + AccentStackOffset / 4)
 		set-base-anchor 'aboveBrace' markMiddle aboveMarkMid
 
 		local m aboveMarkBot
@@ -475,7 +476,7 @@ glyph-block Marks : begin
 		include : dispiro
 			widths.rhs : Math.min radius (markFine * [linreg 16 2 90 1.75 (markHalfStroke * 2)])
 			straight.down.start (markMiddle + radius) (aboveMarkTop - radius + commaOvershoot)
-			quadcontrols 0 0.6
+			quadControls 0 0.6
 			g4   [mix markMiddle (markMiddle - radius) 0.2] (aboveMarkBot - radius - commaOvershoot2)
 		include : ApparentTranslate 0 (DotRadius * 0.3)
 
@@ -503,7 +504,7 @@ glyph-block Marks : begin
 		include : dispiro
 			widths.lhs : Math.min radius (markFine * [linreg 16 2 90 1.75 (markHalfStroke * 2)])
 			straight.down.start (markMiddle - radius) (aboveMarkTop - radius + commaOvershoot)
-			quadcontrols 0 0.6
+			quadControls 0 0.6
 			g4   [mix markMiddle (markMiddle + radius) 0.2] (aboveMarkBot - radius - commaOvershoot2)
 		include : ApparentTranslate 0 (DotRadius * 0.3)
 
@@ -1112,7 +1113,7 @@ glyph-block Marks : begin
 	TurnAboveMarkToBelow 'dblRingBelow' 0x35a 'dblRingAbove'
 	TurnAboveMarkToBelow 'lrArrowBelow' 0x34D 'lrArrowAbove'
 	TurnAboveMarkToBelow 'upArrowBelow' 0x34E 'downArrowAbove'
-	TurnAboveMarkToBelow 'sbRsbUnderlineBelow' 0x332 'sbRsbOverlineAbove'
+	TurnAboveMarkToBelow 'sbRsbUnderlineBelow' null 'sbRsbOverlineAbove'
 
 	create-glyph 'greaterAndUpArrowheadBelow' 0x0356 : glyph-proc
 		set-width 0
@@ -1170,7 +1171,7 @@ glyph-block Marks : begin
 				g4 (startX - radius) (startY + radius) [widths.rhs (hornFine / 2)]
 				archv
 				g4 startX startY [widths.rhs hornFine]
-				quadcontrols 0 0.75 16 : object : blend : lambda [t]
+				quadControls 0 0.75 16 : object : blend : lambda [t]
 					widths.rhs [mix hornFine hornStroke t]
 				g4 (attX - overshootX - HalfStroke * HVContrast) (attY - overshootY - Stroke) [widths.rhs hornStroke]
 
@@ -1353,9 +1354,9 @@ glyph-block Marks : begin
 		include : dispiro
 			widths.center (markHalfStroke * 2)
 			g4 tieLeft aboveTieBottom
-			quadcontrols  0.5 1
+			quadControls  0.5 1
 			g4.right.mid  0 aboveTieTop [heading Rightward]
-			quadcontrols  0.5 0
+			quadControls  0.5 0
 			g4 tieRight aboveTieBottom
 
 	create-glyph 'turnTieAbove' 0x35D : glyph-proc
@@ -1365,9 +1366,9 @@ glyph-block Marks : begin
 		include : dispiro
 			widths.center (markHalfStroke * 2)
 			g4 tieLeft aboveTieTop
-			quadcontrols  0.5 1
+			quadControls  0.5 1
 			g4.right.mid  0 aboveTieBottom [heading Rightward]
-			quadcontrols  0.5 0
+			quadControls  0.5 0
 			g4 tieRight aboveTieTop
 
 	create-glyph 'tieBelow' 0x35C : glyph-proc

@@ -1,8 +1,6 @@
 $$include '../../../meta/macros.ptl'
 
 import [mix linreg clamp fallback] from '../../../support/utils'
-import [DesignParameters] from '../../../meta/aesthetics'
-import '../../../support/point' as Point
 
 glyph-module
 
@@ -20,7 +18,7 @@ glyph-block Symbol-Math-Circled : begin
 	MakeMathCircled 0x2296 'innerMinus'
 	MakeMathCircled 0x2297 'innerMultiply'
 	MakeMathCircled 0x2298 'innerMultiplyStroke1'
-	MakeMathCircled 0x2299 'mathcdot'
+	MakeMathCircled 0x2299 'mathCDotInner'
 	MakeMathCircled 0x229A 'whiteSmallCircle.NWID'
 	MakeMathCircled 0x229B 'mathAsterisk'
 
@@ -32,7 +30,7 @@ glyph-block Symbol-Math-Circled : begin
 					refer-glyph : MangleName 'mathOOutlineBig'
 					refer-glyph src
 
-		MakeMathBigCircled 0x2A00 'mathcdotBig'
+		MakeMathBigCircled 0x2A00 'mathCDotBig'
 		MakeMathBigCircled 0x2A01 'innerPlusBig'
 		MakeMathBigCircled 0x2A02 'innerMultiplyBig'
 
