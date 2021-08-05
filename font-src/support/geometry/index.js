@@ -4,11 +4,11 @@ const crypto = require("crypto");
 const TypoGeom = require("typo-geom");
 const SpiroJs = require("spiro");
 
-const Point = require("./point");
-const Transform = require("./transform");
 const CurveUtil = require("./curve-util");
-const { SpiroExpander } = require("./spiro-expand");
 const Format = require("../util/formatter");
+const { Point } = require("./point");
+const { Transform } = require("./transform");
+const { SpiroExpander } = require("./spiro-expand");
 
 class GeometryBase {
 	asContours() {
@@ -128,13 +128,15 @@ class DiSpiroGeometry extends GeometryBase {
 
 	asContours() {
 		if (this.m_cachedContours) return this.m_cachedContours;
-		const { lhs, rhs } = this.expand();
+		const expandResult = this.expand();
+		const lhs = [...expandResult.lhs];
+		const rhs = [...expandResult.rhs];
 
 		let rawGeometry;
 		if (this.m_closed) {
 			rawGeometry = new CombineGeometry([
-				new SpiroGeometry(Transform.Id(), this.m_closed, lhs.slice(0, -1)),
-				new SpiroGeometry(Transform.Id(), this.m_closed, rhs.reverse().slice(0, -1))
+				new SpiroGeometry(Transform.Id(), true, lhs.slice(0, -1)),
+				new SpiroGeometry(Transform.Id(), true, rhs.reverse().slice(0, -1))
 			]);
 		} else {
 			lhs[0].type = lhs[lhs.length - 1].type = "corner";
